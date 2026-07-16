@@ -19,6 +19,7 @@
             <button class="resource energy"><span>⚡</span><b id="energyValue">7</b></button>
             <button class="resource crystals"><span>✦</span><b id="crystalValue">2 480</b></button>
           </div>
+          <button class="menu-button" id="menuButton" aria-label="Открыть меню игр">🎮</button>
         </header>
 
         <div class="sky-glow"></div><div class="stars"></div>
@@ -53,6 +54,14 @@
         <section class="sheet hidden" id="tasksSheet"><button class="close-sheet">×</button><p class="eyebrow">ЕЖЕДНЕВНЫЕ ЗАДАНИЯ</p><h2>Новый день — новая энергия</h2><div class="task done"><span>✓</span><p>Войди в игру<br><small>Награда получена: +3 ⚡</small></p></div><div class="task"><span>2/5</span><p>Заряди луну 5 раз<br><small>Награда: 1 ⚡</small></p><button class="task-go">К орбите</button></div><div class="task"><span>0/3</span><p>Пройди «Орбитальный сортер»<br><small>Награда: 100 ✦ + 1 ⚡</small></p><button class="task-go">Играть</button></div></section>
         <section class="sheet hidden" id="wheelSheet"><button class="close-sheet">×</button><p class="eyebrow">ИНСТАНТ-ВИН</p><h2>Колесо удачи</h2><div class="wheel"><div>✦<br><small>+250</small></div></div><p class="wheel-note">Сегодня доступно 2 бесплатных вращения</p><button class="primary-action full" id="spinWheel">Крутить бесплатно</button></section>
         <section class="sheet hidden" id="drawsSheet"><button class="close-sheet">×</button><p class="eyebrow">РОЗЫГРЫШ</p><h2>Лови большие призы</h2><article class="prize-card"><span>🎧</span><div><b>Наушники будущего</b><small>Розыгрыш через 8 дней</small></div><button>50 ✦</button></article><article class="prize-card"><span>🚀</span><div><b>Полёт в Звёздный городок</b><small>Розыгрыш через 21 день</small></div><button>120 ✦</button></article></section>
+        <aside class="side-menu hidden" id="sideMenu" aria-label="Боковое меню">
+          <button class="close-menu" id="closeMenu">×</button><span class="menu-orbit">✦</span><p class="eyebrow">ДОПОЛНИТЕЛЬНО</p><h2>Игровая<br>станция</h2>
+          <button class="menu-game" id="openGames"><span class="gamepad-icon">🎮</span><span><b>Мини‑игры</b><small>Энергия и кристаллы</small></span><i>›</i></button>
+          <button class="menu-link"><span>⚙</span> Настройки</button><button class="menu-link"><span>◌</span> О Меганавтах</button>
+        </aside>
+        <section class="sheet hidden games-sheet" id="gamesSheet"><button class="close-sheet">×</button><p class="eyebrow">МИНИ‑ИГРЫ · ДЕНЬ 04</p><h2>Поиграем?</h2><p class="game-intro">Пройди три уровня в любой игре и забери ежедневную награду.</p><button class="game-card water-card" data-game="water"><span class="game-art">🧪</span><span><b>Water Sorter</b><small>Собери воду по цветам</small></span><i>Играть</i></button><button class="game-card arrow-card" data-game="arrow"><span class="game-art">↗</span><span><b>Arrow Puzzle</b><small>Расчисти лунный затор</small></span><i>Играть</i></button></section>
+        <section class="sheet hidden play-sheet" id="waterSheet"><button class="close-sheet">×</button><p class="eyebrow">WATER SORTER · УРОВЕНЬ 01</p><h2>Разлей по цветам</h2><p class="game-instruction">Нажми на пробирку, затем выбери, куда перелить верхний слой.</p><div class="water-board" id="waterBoard"></div><button class="reset-game" id="resetWater">↻ Начать заново</button></section>
+        <section class="sheet hidden play-sheet" id="arrowSheet"><button class="close-sheet">×</button><p class="eyebrow">ARROW PUZZLE · УРОВЕНЬ 01</p><h2>Освободи орбиты</h2><p class="game-instruction">Луна улетит, если на её пути нет другой луны.</p><div class="arrow-board" id="arrowBoard"></div><button class="reset-game" id="resetArrow">↻ Начать заново</button></section>
         <div class="toast" id="toast" role="status"></div>
       </section>
     </main>
